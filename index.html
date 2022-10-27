@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round|Hind|Nanum+Gothic">
+    <script src="https://kit.fontawesome.com/bfeb2b2a30.js" crossorigin="anonymous"></script>
+    <title>Dictionary</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="welcoming-screen">
+                <div class="title">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    <h1>English Dictionary</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="search">
+                <form id="searchbar" action="" method="">
+                    <input type="text" placeholder="search a word ...." id="search-input" required />
+                    <button type="submit" id="go-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <div class="search-message">
+                    <p>Type any english word and click search to get the meaning</p>
+                </div>
+            </div>
+            <div id="result">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Created by <a href="https://github.com/naputami" target="_blank">@naputami</a></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+:root {
+    --color1: #F2E9E4;
+    --color2: #C9ADA7;
+    --color3: #9A8C98;
+    --color4: #4A4E69;
+    --color5: #22223B;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+   background: rgb(34,34,59);
+   background: linear-gradient(90deg, var(--color4) 0%,  var(--color5) 100%);
+}
+
+.wrapper {
+    width: 50%;
+    background-color: var(--color3);
+    border-radius: 1rem;
+    margin: 10% auto;
+    height: fit-content;
+    padding: 3rem;
+}
+
+.welcoming-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    color: var(--color5);
+    width: 100%;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcoming-screen h1 {
+    font-size: 5rem;
+    font-family: "Varela Round", serif;
+}
+
+.welcoming-screen .fa-solid {
+    font-size: 5rem;
+    margin-right: 2rem;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+#searchbar input {
+    background-color: inherit;
+    padding: 0.3rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 0.3rem solid var(--color5);
+    margin-right: 0.7rem;
+    font-family: "Hind";
+    font-size: 1.5rem;
+    width: 70%;
+}
+
+#searchbar input:focus {
+    outline: none;
+}
+
+button {
+    background-color: var(--color5);
+    color: var(--color1);
+    padding: 0.3rem;
+    border: none;
+    font-family: "Hind";
+    width: 18%;
+    margin-left: 0.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.search-message {
+    font-family: "Hind", serif;
+    color: var(--color4);
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+#loading-message {
+    visibility: hidden;
+}
+
+.word-result {
+    margin: 0.5rem auto;
+    width: 80%;
+    padding: 1rem;
+}
+
+.word {
+    font-size: 1.8rem;
+    color: var(--color5);
+    font-family: "Varela Round", serif;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.part-of-speech, .phonetics {
+    display: inline-block;
+    font-family: "Hind";
+    font-size: 1.4rem;
+    color: var(--color4);
+    margin-top: 0;
+}
+
+.phonetics{
+    margin-left: 1rem;
+}
+
+#play-sound {
+    display: inline-block;
+    background-color: inherit;
+    padding: 0;
+    width: 2rem;
+    color: var(--color5);
+}
+
+.meaning {
+    font-size: 1.6rem;
+    font-family: "Hind", serif;
+    margin-top: 0;
+}
+
+.example-sentence p {
+    font-size: 1.5rem;
+    font-family: "Nanum Gothic", serif;
+    border-left: var(--color5) solid 0.3rem;
+    padding-left: 0.5rem;
+}
+
+.error, .loading {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Varela Round", serif;
+    margin-top: 5rem;
+}
+
+.loading {
+    font-family: "Hind", serif;
+}
+
+.word-loading {
+    font-weight: bold;
+}
+
+footer {
+    font-family: "Varela Round", serif;
+    color: var(--color1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media(max-width: 900px){
+    body {
+        width: 100%;
+    }
+    .wrapper {
+       width: 70%;
+       position: relative;
+       top: 20vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcoming-screen h1 {
+        font-size: 1.8rem;
+    }
+
+    .welcoming-screen .fa-solid {
+        font-size: 1.8rem;
+        margin-right: 1rem;
+    }
+
+    #searchbar input {
+        width: 60%;
+        font-size: 1.4rem;
+    }
+
+    button {
+        padding: 0.2rem;
+        width: 15%;
+        margin-left: 0.2rem;
+    }
+
+    .search {
+        margin-left: 2rem;
+    }
+
+    .search-message {
+        font-size: 1.3rem;
+        margin-right: 2rem;
+    }
+
+    .error, .loading {
+        font-size: 1.6rem;
+    }
+
+    .word {
+        font-size: 1.5rem;
+    }
+
+    #playsound {
+        width: 1.7rem;
+    }
+
+    .meaning {
+        font-size: 1.4rem;
+    }
+
+    .example-sentence p {
+        font-size: 1.3rem;
+    }
+
+    .part-of-speech, .phonetics {
+        font-size: 1.2rem;
+    }
+
+
+}
