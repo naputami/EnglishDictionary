@@ -7,11 +7,10 @@ let audio;
 
 searchButton.addEventListener("click", (event) => {
     event.preventDefault();
-    searchMessage.style.display = "none";
-    result.innerHTML = `<p class="loading">Searching <span class="word-loading">${searchInput.value}</span> meaning... </p>`
     if(searchInput.value == ""){
         alert("Input field can't be empty")
     } else {
+        result.innerHTML = `<p class="loading">Searching <span class="word-loading">${searchInput.value}</span> meaning... </p>`
         const kw = searchInput.value.toString().toLowerCase();
         fetch(`${url}${kw}`)
         .then((response) => {
